@@ -9,19 +9,27 @@ const (
 	RUB Currency = "RUB"
 	USD Currency = "USD"
 )
+
 type PAN string
 
 type Card struct {
-	ID int
-	PAN PAN
-	Balance Money
+	ID       int
+	PAN      PAN
+	Balance  Money
 	Currency Currency
-	Color string
-	Name string
-	Active bool
+	Color    string
+	Name     string
+	Active   bool
 }
 
 type Payment struct {
-	ID int
+	ID     int
 	Amount Money
+}
+
+type PaymentSource struct {
+	Type    string 
+	Number  string
+	Balance Money
+	Active bool
 }
